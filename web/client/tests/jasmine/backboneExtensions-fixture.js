@@ -33,34 +33,34 @@ describe('Journey', function(){
 	
 });
 
+describe('JourneyList', function(){
+	
+	it('Points should return sum of points for all journeys', function(){
 
-// module('JourneyList');
-// 
-// it('Points should return sum of points for all journeys', function(){
-// 
-// 	var journeys = new BB.JourneyList();
-// 	journeys.add(new BB.Journey({points:1}));
-// 	journeys.add(new BB.Journey({points:2}));
-// 	
-// 	equals(journeys.points(),3);
-// });
-// 
-// it('Points should return sum of points for all journeys', function(){
-// 
-// 	var journeys = new BB.JourneyList();
-// 	journeys.add(new BB.Journey({stories:1}));
-// 	journeys.add(new BB.Journey({stories:2}));
-// 	
-// 	equals(journeys.stories(),3);
-// });
-// 
-// module('Journey View');
-// 
-// it('Clear should set values of all input fields to blank', function()
-// 
-// 	var journeyView = new BB.JourneyView();
-// 	//the way the test should work, it is just calls to render with a new model
-// 	//then assume binding takes place as normal
-// });
-// 
-// 
+		var journeys = new BB.JourneyList();
+		journeys.add(new BB.Journey({points:1}));
+		journeys.add(new BB.Journey({points:2}));
+
+		//it(journeys.points()).shouldEqual(3);
+	});
+
+	it('Points should return sum of points for all journeys', function(){
+
+		var journeys = new BB.JourneyList();
+		journeys.add(new BB.Journey({stories:1}));
+		journeys.add(new BB.Journey({stories:2}));
+
+		//it(journeys.stories()).shouldEqual(3);
+	});
+	
+});
+
+
+describe('Journey View', function(){
+	it('Clear should set values of all input fields to blank', function(){
+
+		var journeyView = new BB.JourneyView();
+		//the way the test should work, it is just calls to render with a new model
+		//then assume binding takes place as normal
+	});	
+});
