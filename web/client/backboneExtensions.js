@@ -19,16 +19,14 @@ _.extend(Backbone.Model.prototype,{
 
 module.Journey = Backbone.Model.extend(
 {   
-	
 	destroy: function(){ Backbone.Model.prototype.destroy.call(this,{url:this.url+'/'+this.id}) },
 	url: '/journeys',
 	initialize: function(attributes) { this.id = attributes['_id']; },//with line 16-18, not sure if this line is needed
 	defaults: {
 	    "name": "",
-	    "points": "0",
-	    "stories": "0"
+	    "points": 0,
+	    "stories": 0
    	}
-
 });  
 
 module.JourneyList = Backbone.Collection.extend({ 
