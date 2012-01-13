@@ -34,22 +34,18 @@ describe('Journey', function(){
 
 describe('JourneyList', function(){
 	
+	beforeEach(function(){
+		this.journeys = new BB.JourneyList();
+		this.journeys.add(new BB.Journey({points:1,stories:2}));
+		this.journeys.add(new BB.Journey({points:2,stories:4}));
+	});
+	
 	it('Points should return sum of points for all journeys', function(){
-
-		var journeys = new BB.JourneyList();
-		journeys.add(new BB.Journey({points:1}));
-		journeys.add(new BB.Journey({points:2}));
-
-		//it(journeys.points()).shouldEqual(3);
+		expect(this.journeys.points()).toEqual(3);
 	});
 
 	it('Points should return sum of points for all journeys', function(){
-
-		var journeys = new BB.JourneyList();
-		journeys.add(new BB.Journey({stories:1}));
-		journeys.add(new BB.Journey({stories:2}));
-
-		//it(journeys.stories()).shouldEqual(3);
+		expect(this.journeys.stories()).toEqual(6);
 	});
 	
 });
